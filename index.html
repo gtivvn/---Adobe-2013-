@@ -1,73 +1,143 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анализ взлома веб-приложений: инцидент с Adobe (2013)</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <!-- Шапка сайта -->
-    <div class="header">
-        <h1>Анализ взлома веб-приложений на примере инцидента с Adobe (2013)</h1>
-    </div>
+/* Общие стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f5f5f5;
+}
 
-    <!-- Навигационное меню -->
-    <div class="navbar">
-        <a href="#about">О ПРОЕКТЕ</a>
-        <a href="#incident">ИНЦИДЕНТ</a>
-        <a href="#analysis">АНАЛИЗ</a>
-        <a href="#conclusions">ВЫВОДЫ</a>
-    </div>
+/* Контейнер для контента */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
-    <!-- Основной контент -->
-    <div class="container">
-        <div class="content" id="about">
-            <h2>О ПРОЕКТЕ</h2>
-            <p>В эпоху цифровизации и повсеместного распространения информационных технологий безопасность веб-приложений становится критически важным аспектом для любого бизнеса и организации. Ежедневно информационные системы сталкиваются с новыми угрозами, которые могут привести к утечке конфиденциальных данных, финансовым потерям и репутационному ущербу.</p>
-            
-            <div class="important-note">
-                <p>Актуальность данного проекта обусловлена необходимостью разработки и внедрения эффективных мер защиты веб-приложений от современных киберугроз. В качестве примера для анализа был выбран инцидент с компанией Adobe в 2013 году, который наглядно продемонстрировал уязвимость веб-приложений и последствия успешной атаки злоумышленников.</p>
-            </div>
-        </div>
+/* Заголовок страницы */
+.header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-        <div class="content" id="incident">
-            <h2>ИНЦИДЕНТ С ADOBE (2013)</h2>
-            <p>В октябре 2013 года Adobe Systems стала жертвой масштабной кибератаки, в результате которой были скомпрометированы данные миллионов пользователей. Злоумышленники получили доступ к:</p>
-            <ul>
-                <li>Исходному коду нескольких продуктов Adobe</li>
-                <li>Данным около 38 миллионов активных пользователей</li>
-                <li>Конфиденциальной информации, включая пароли и платежные данные</li>
-            </ul>
-        </div>
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
 
-        <div class="content" id="analysis">
-            <h2>АНАЛИЗ АТАКИ</h2>
-            <p>Анализ инцидента показал несколько ключевых уязвимостей:</p>
-            <ol>
-                <li><strong>Недостаточная защита базы данных:</strong> Хранилище пользовательских данных не было должным образом защищено от SQL-инъекций.</li>
-                <li><strong>Слабая система аутентификации:</strong> Использовались устаревшие методы хранения паролей.</li>
-                <li><strong>Отсутствие сегментации сети:</strong> Получив доступ к одной системе, злоумышленники смогли перемещаться по всей корпоративной сети.</li>
-                <li><strong>Задержка в обнаружении:</strong> Атака была обнаружена только через несколько недель после проникновения.</li>
-            </ol>
-        </div>
+/* Навигационное меню */
+.navbar {
+    background-color: #34495e;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 
-        <div class="content" id="conclusions">
-            <h2>ВЫВОДЫ И РЕКОМЕНДАЦИИ</h2>
-            <p>На основании анализа инцидента можно сделать следующие выводы:</p>
-            <ul>
-                <li>Необходимость регулярного аудита безопасности веб-приложений</li>
-                <li>Важность своевременного обновления систем защиты</li>
-                <li>Критическая значимость обучения сотрудников основам кибербезопасности</li>
-                <li>Необходимость внедрения многофакторной аутентификации</li>
-                <li>Важность быстрого реагирования на инциденты</li>
-            </ul>
-        </div>
-    </div>
+.navbar a {
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
 
-    <!-- Подвал сайта -->
-    <div class="footer">
-        <p>© 2023 Проект по анализу кибербезопасности. Все права защищены.</p>
-    </div>
-</body>
-</html>
+.navbar a:hover {
+    background-color: #1abc9c;
+}
+
+/* Основной контент */
+.content {
+    padding: 20px;
+}
+
+.content h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 10px;
+    margin-top: 30px;
+}
+
+.content p {
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Блок с важной информацией */
+.important-note {
+    background-color: #e8f4f8;
+    border-left: 4px solid #1abc9c;
+    padding: 15px;
+    margin: 20px 0;
+}
+
+/* Информация о проекте */
+.project-info {
+    margin-top: 20px;
+}
+
+.project-info h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.project-info table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.project-info table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.project-info table td:first-child {
+    width: 40%;
+    font-weight: bold;
+}
+
+/* Футер */
+.footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .navbar a {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .container {
+        padding: 10px;
+    }
+    
+    .project-info table td:first-child {
+        width: 100%;
+        display: block;
+    }
+    
+    .project-info table td {
+        display: block;
+        border-bottom: none;
+        padding: 5px 0;
+    }
+    
+    .project-info table tr {
+        border-bottom: 1px solid #ddd;
+        padding: 10px 0;
+        display: block;
+    }
+}
